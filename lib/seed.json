@@ -1,0 +1,915 @@
+{
+  "products": [
+    {
+      "id": "oud",
+      "name": "Oud Nocturne",
+      "ar": "عود نوكتورن",
+      "sku": "MO-OUD-050",
+      "fam": "woody",
+      "conc": "EDP",
+      "rating": 4.8,
+      "reviews": 86,
+      "status": "live",
+      "badge": {
+        "en": "Bestseller",
+        "ar": "الأكثر مبيعاً"
+      },
+      "variants": [
+        {
+          "ml": 30,
+          "p": 1450,
+          "stock": 8
+        },
+        {
+          "ml": 50,
+          "p": 2350,
+          "stock": 12
+        },
+        {
+          "ml": 100,
+          "p": 3450,
+          "stock": 3
+        }
+      ],
+      "desc": {
+        "en": "Smoked agarwood wrapped in saffron and a veil of Taif rose. Wears close to the skin for eight hours, warmer as the day ends.",
+        "ar": "خشب العود المدخّن يلتحف بالزعفران وخفقة من ورد الطائف. يبقى قريباً من البشرة ثماني ساعات، ويزداد دفئاً مع المغيب."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Saffron",
+            "ar": "زعفران"
+          },
+          {
+            "en": "Pink pepper",
+            "ar": "فلفل وردي"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Agarwood",
+            "ar": "خشب العود"
+          },
+          {
+            "en": "Leather",
+            "ar": "جلد"
+          }
+        ],
+        "base": [
+          {
+            "en": "Sandalwood",
+            "ar": "خشب الصندل"
+          },
+          {
+            "en": "Amber",
+            "ar": "عنبر"
+          }
+        ]
+      },
+      "lon": 5,
+      "sil": 4,
+      "seasons": [
+        "autumn",
+        "winter",
+        "night"
+      ],
+      "hint": "Oud Nocturne — tall rectangular flacon, smoky amber juice",
+      "tags": [],
+      "gallery": []
+    },
+    {
+      "id": "rose",
+      "name": "Rose Taifi Elixir",
+      "ar": "إليكسير ورد الطائف",
+      "sku": "MO-ROS-050",
+      "fam": "floral",
+      "conc": "Elixir",
+      "rating": 4.9,
+      "reviews": 64,
+      "status": "live",
+      "badge": {
+        "en": "New",
+        "ar": "جديد"
+      },
+      "variants": [
+        {
+          "ml": 30,
+          "p": 1650,
+          "stock": 10
+        },
+        {
+          "ml": 50,
+          "p": 2650,
+          "stock": 9
+        },
+        {
+          "ml": 100,
+          "p": 3900,
+          "stock": 6
+        }
+      ],
+      "desc": {
+        "en": "Taif rose picked at dawn, held in lychee and a long musk. Bright for an hour, then quiet and close.",
+        "ar": "ورد الطائف مقطوف عند الفجر، محفوظ في الليتشي ومسك طويل البقاء. مشرق في ساعته الأولى، ثم هادئ وقريب."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Bergamot",
+            "ar": "برغموت"
+          },
+          {
+            "en": "Lychee",
+            "ar": "ليتشي"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Taif rose",
+            "ar": "ورد الطائف"
+          },
+          {
+            "en": "Peony",
+            "ar": "الفاوانيا"
+          }
+        ],
+        "base": [
+          {
+            "en": "Musk",
+            "ar": "مسك"
+          },
+          {
+            "en": "Patchouli",
+            "ar": "باتشولي"
+          }
+        ]
+      },
+      "lon": 4,
+      "sil": 4,
+      "seasons": [
+        "spring",
+        "evening"
+      ],
+      "hint": "Rose Taifi — round disc flacon, blush pink juice",
+      "tags": [],
+      "gallery": []
+    },
+    {
+      "id": "amber",
+      "name": "Amber Dunes",
+      "ar": "كثبان العنبر",
+      "sku": "MO-AMB-050",
+      "fam": "amber",
+      "conc": "EDP",
+      "rating": 4.6,
+      "reviews": 51,
+      "status": "live",
+      "badge": null,
+      "variants": [
+        {
+          "ml": 30,
+          "p": 1350,
+          "stock": 14
+        },
+        {
+          "ml": 50,
+          "p": 2100,
+          "stock": 11
+        },
+        {
+          "ml": 100,
+          "p": 3100,
+          "stock": 0
+        }
+      ],
+      "desc": {
+        "en": "Cardamom over labdanum and vanilla. A warm resin that reads like sun on stone.",
+        "ar": "حبهان فوق اللبدانوم والفانيليا. راتنج دافئ يشبه وقع الشمس على الحجر."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Cardamom",
+            "ar": "حبهان"
+          },
+          {
+            "en": "Mandarin",
+            "ar": "ماندرين"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Labdanum",
+            "ar": "لبدانوم"
+          },
+          {
+            "en": "Benzoin",
+            "ar": "بنزوين"
+          }
+        ],
+        "base": [
+          {
+            "en": "Vanilla",
+            "ar": "فانيليا"
+          },
+          {
+            "en": "Tonka",
+            "ar": "تونكا"
+          }
+        ]
+      },
+      "lon": 4,
+      "sil": 3,
+      "seasons": [
+        "autumn",
+        "winter"
+      ],
+      "hint": "Amber Dunes — square flacon, golden amber juice",
+      "tags": [],
+      "gallery": []
+    },
+    {
+      "id": "vetiver",
+      "name": "Vetiver Nile",
+      "ar": "نجيل النيل",
+      "sku": "MO-VET-050",
+      "fam": "fresh",
+      "conc": "EDP",
+      "rating": 4.5,
+      "reviews": 38,
+      "status": "live",
+      "badge": null,
+      "variants": [
+        {
+          "ml": 30,
+          "p": 1250,
+          "stock": 20
+        },
+        {
+          "ml": 50,
+          "p": 1950,
+          "stock": 16
+        },
+        {
+          "ml": 100,
+          "p": 2850,
+          "stock": 9
+        }
+      ],
+      "desc": {
+        "en": "Lime and papyrus over damp vetiver. Cool, green, built for heat.",
+        "ar": "ليمون وورق البردي فوق نجيل هندي رطب. بارد وأخضر، مصنوع للحرّ."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Lime",
+            "ar": "ليمون"
+          },
+          {
+            "en": "Papyrus",
+            "ar": "بردي"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Vetiver",
+            "ar": "نجيل هندي"
+          },
+          {
+            "en": "Fig leaf",
+            "ar": "ورق التين"
+          }
+        ],
+        "base": [
+          {
+            "en": "Cedar",
+            "ar": "أرز"
+          },
+          {
+            "en": "Ambrette",
+            "ar": "أمبريت"
+          }
+        ]
+      },
+      "lon": 3,
+      "sil": 3,
+      "seasons": [
+        "summer",
+        "day"
+      ],
+      "hint": "Vetiver Nile — tall flacon, pale sage juice",
+      "tags": [],
+      "gallery": []
+    },
+    {
+      "id": "musk",
+      "name": "Musk Blanc",
+      "ar": "مسك أبيض",
+      "sku": "MO-MSK-050",
+      "fam": "musk",
+      "conc": "EDP",
+      "rating": 4.7,
+      "reviews": 72,
+      "status": "live",
+      "badge": null,
+      "variants": [
+        {
+          "ml": 30,
+          "p": 1150,
+          "stock": 18
+        },
+        {
+          "ml": 50,
+          "p": 1850,
+          "stock": 13
+        },
+        {
+          "ml": 100,
+          "p": 2700,
+          "stock": 15
+        }
+      ],
+      "desc": {
+        "en": "Pear and iris settling into a clean cashmeran musk. The one to wear when nothing else fits.",
+        "ar": "كمثرى وسوسن يستقران في مسك كشميران نظيف. الاختيار عندما لا يناسبك شيء آخر."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Aldehydes",
+            "ar": "ألدهيدات"
+          },
+          {
+            "en": "Pear",
+            "ar": "كمثرى"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Iris",
+            "ar": "سوسن"
+          },
+          {
+            "en": "Cotton flower",
+            "ar": "زهرة القطن"
+          }
+        ],
+        "base": [
+          {
+            "en": "White musk",
+            "ar": "مسك أبيض"
+          },
+          {
+            "en": "Cashmeran",
+            "ar": "كشميران"
+          }
+        ]
+      },
+      "lon": 3,
+      "sil": 2,
+      "seasons": [
+        "spring",
+        "day"
+      ],
+      "hint": "Musk Blanc — square frosted flacon, clear juice",
+      "tags": [],
+      "gallery": []
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron Majlis",
+      "ar": "مجلس الزعفران",
+      "sku": "MO-SAF-050",
+      "fam": "spicy",
+      "conc": "Extrait",
+      "rating": 4.9,
+      "reviews": 44,
+      "status": "live",
+      "badge": {
+        "en": "Limited",
+        "ar": "إصدار محدود"
+      },
+      "variants": [
+        {
+          "ml": 30,
+          "p": 2100,
+          "stock": 5
+        },
+        {
+          "ml": 50,
+          "p": 3200,
+          "stock": 4
+        },
+        {
+          "ml": 100,
+          "p": 4800,
+          "stock": 2
+        }
+      ],
+      "desc": {
+        "en": "Saffron and cinnamon over rose and oud, closed with myrrh. Made for long evenings indoors.",
+        "ar": "زعفران وقرفة فوق الورد والعود، تُختم بالمُرّ. صُنع للأمسيات الطويلة في الداخل."
+      },
+      "notes": {
+        "top": [
+          {
+            "en": "Saffron",
+            "ar": "زعفران"
+          },
+          {
+            "en": "Cinnamon",
+            "ar": "قرفة"
+          }
+        ],
+        "heart": [
+          {
+            "en": "Rose",
+            "ar": "ورد"
+          },
+          {
+            "en": "Oud",
+            "ar": "عود"
+          }
+        ],
+        "base": [
+          {
+            "en": "Myrrh",
+            "ar": "مُرّ"
+          },
+          {
+            "en": "Incense",
+            "ar": "بخور"
+          }
+        ]
+      },
+      "lon": 5,
+      "sil": 5,
+      "seasons": [
+        "winter",
+        "night"
+      ],
+      "hint": "Saffron Majlis — round disc flacon, deep garnet juice",
+      "tags": [],
+      "gallery": []
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "status": "approved",
+      "stars": 5,
+      "product": "Oud Nocturne",
+      "author": {
+        "en": "Nour A.",
+        "ar": "نور ع."
+      },
+      "location": {
+        "en": "Cairo",
+        "ar": "القاهرة"
+      },
+      "body": {
+        "en": "It sits on the skin for a whole day and never turns sweet. The saffron is the reason I keep buying it.",
+        "ar": "يبقى على البشرة يوماً كاملاً ولا يتحوّل إلى حلو. الزعفران هو سبب شرائي المتكرّر."
+      },
+      "reply": null
+    },
+    {
+      "id": "t2",
+      "status": "approved",
+      "stars": 5,
+      "product": "Rose Taifi Elixir",
+      "author": {
+        "en": "Hisham F.",
+        "ar": "هشام ف."
+      },
+      "location": {
+        "en": "Alexandria",
+        "ar": "الإسكندرية"
+      },
+      "body": {
+        "en": "I bought the discovery set unsure and came back for the 100 ml two weeks later.",
+        "ar": "اشتريت علبة التجربة مرتدّداً ثم عدت بعد أسبوعين للقارورة ١٠٠ مل."
+      },
+      "reply": null
+    },
+    {
+      "id": "t3",
+      "status": "approved",
+      "stars": 4,
+      "product": "Vetiver Nile",
+      "author": {
+        "en": "Mariam S.",
+        "ar": "مريم س."
+      },
+      "location": {
+        "en": "Giza",
+        "ar": "الجيزة"
+      },
+      "body": {
+        "en": "Cool enough for August in Cairo, which I did not think was possible.",
+        "ar": "بارد بما يكفي لأغسطس في القاهرة، وهو ما لم أظنه ممكناً."
+      },
+      "reply": null
+    },
+    {
+      "id": "t4",
+      "status": "pending",
+      "stars": 2,
+      "product": "Amber Dunes",
+      "author": {
+        "en": "Omar Z.",
+        "ar": "عمر ز."
+      },
+      "location": {
+        "en": "Red Sea",
+        "ar": "البحر الأحمر"
+      },
+      "body": {
+        "en": "Beautiful opening but it fades on me within three hours.",
+        "ar": "مقدّمة جميلة لكنه يخبو عندي في ثلاث ساعات."
+      },
+      "reply": null
+    },
+    {
+      "id": "t5",
+      "status": "pending",
+      "stars": 5,
+      "product": "Saffron Majlis",
+      "author": {
+        "en": "Dina R.",
+        "ar": "دينا ر."
+      },
+      "location": {
+        "en": "Dakahlia",
+        "ar": "الدقهلية"
+      },
+      "body": {
+        "en": "I wore it to a wedding and three people asked what it was before dinner.",
+        "ar": "لبسته في فرح وسألني ثلاثة عنه قبل العشاء."
+      },
+      "reply": null
+    }
+  ],
+  "orders": [
+    {
+      "id": "MO-24817",
+      "status": "new",
+      "placedAt": "2026-09-17T11:20:00.000Z",
+      "customer": {
+        "name": "Nour Abdelaziz",
+        "phone": "+20 100 220 4418",
+        "email": "nour.a@example.com"
+      },
+      "address": {
+        "governorate": "cairo",
+        "street": "12 Brazil St, Zamalek"
+      },
+      "items": [
+        {
+          "productId": "oud",
+          "ml": 50,
+          "qty": 1,
+          "unitPrice": 2350
+        },
+        {
+          "productId": "musk",
+          "ml": 30,
+          "qty": 1,
+          "unitPrice": 1150
+        }
+      ],
+      "shipping": "standard",
+      "payment": "cod",
+      "giftWrap": true,
+      "coupon": null,
+      "totals": {
+        "subtotal": 3500,
+        "discount": 0,
+        "shipping": 0,
+        "giftWrap": 150,
+        "codFee": 30,
+        "total": 3680
+      },
+      "paymentStatus": "due"
+    },
+    {
+      "id": "MO-24816",
+      "status": "packed",
+      "placedAt": "2026-09-17T08:05:00.000Z",
+      "customer": {
+        "name": "Hisham Fawzy",
+        "phone": "+20 122 774 9031",
+        "email": "h.fawzy@example.com"
+      },
+      "address": {
+        "governorate": "alex",
+        "street": "47 Fouad St, Raml Station"
+      },
+      "items": [
+        {
+          "productId": "rose",
+          "ml": 50,
+          "qty": 1,
+          "unitPrice": 2650
+        }
+      ],
+      "shipping": "standard",
+      "payment": "card",
+      "giftWrap": false,
+      "coupon": null,
+      "totals": {
+        "subtotal": 2650,
+        "discount": 0,
+        "shipping": 0,
+        "giftWrap": 0,
+        "codFee": 0,
+        "total": 2650
+      },
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "MO-24815",
+      "status": "shipped",
+      "placedAt": "2026-09-16T15:42:00.000Z",
+      "customer": {
+        "name": "Mariam Saad",
+        "phone": "+20 111 508 6620",
+        "email": "mariam.saad@example.com"
+      },
+      "address": {
+        "governorate": "giza",
+        "street": "9 El Batal Ahmed Abdel Aziz"
+      },
+      "items": [
+        {
+          "productId": "vetiver",
+          "ml": 50,
+          "qty": 1,
+          "unitPrice": 1950
+        }
+      ],
+      "shipping": "standard",
+      "payment": "wallet",
+      "giftWrap": false,
+      "coupon": null,
+      "totals": {
+        "subtotal": 1950,
+        "discount": 0,
+        "shipping": 0,
+        "giftWrap": 0,
+        "codFee": 0,
+        "total": 1950
+      },
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "MO-24814",
+      "status": "delivered",
+      "placedAt": "2026-09-16T09:11:00.000Z",
+      "customer": {
+        "name": "Karim Halim",
+        "phone": "+20 106 331 7725",
+        "email": "k.halim@example.com"
+      },
+      "address": {
+        "governorate": "luxor",
+        "street": "3 Khaled Ibn El Walid St"
+      },
+      "items": [
+        {
+          "productId": "saffron",
+          "ml": 100,
+          "qty": 1,
+          "unitPrice": 4800
+        }
+      ],
+      "shipping": "standard",
+      "payment": "card",
+      "giftWrap": false,
+      "coupon": null,
+      "totals": {
+        "subtotal": 4800,
+        "discount": 0,
+        "shipping": 0,
+        "giftWrap": 0,
+        "codFee": 0,
+        "total": 4800
+      },
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "MO-24813",
+      "status": "delivered",
+      "placedAt": "2026-09-15T18:30:00.000Z",
+      "customer": {
+        "name": "Dina Rashad",
+        "phone": "+20 128 904 1152",
+        "email": "dina.r@example.com"
+      },
+      "address": {
+        "governorate": "dakahlia",
+        "street": "22 Gehan St, Mansoura"
+      },
+      "items": [
+        {
+          "productId": "amber",
+          "ml": 50,
+          "qty": 1,
+          "unitPrice": 2100
+        }
+      ],
+      "shipping": "standard",
+      "payment": "cod",
+      "giftWrap": false,
+      "coupon": null,
+      "totals": {
+        "subtotal": 2100,
+        "discount": 0,
+        "shipping": 0,
+        "giftWrap": 0,
+        "codFee": 30,
+        "total": 2130
+      },
+      "paymentStatus": "paid"
+    },
+    {
+      "id": "MO-24812",
+      "status": "cancelled",
+      "placedAt": "2026-09-15T12:02:00.000Z",
+      "customer": {
+        "name": "Omar Zaki",
+        "phone": "+20 109 662 3374",
+        "email": "omar.zaki@example.com"
+      },
+      "address": {
+        "governorate": "redsea",
+        "street": "Village Rd, El Gouna"
+      },
+      "items": [
+        {
+          "productId": "oud",
+          "ml": 30,
+          "qty": 1,
+          "unitPrice": 1450
+        }
+      ],
+      "shipping": "standard",
+      "payment": "card",
+      "giftWrap": false,
+      "coupon": null,
+      "totals": {
+        "subtotal": 1450,
+        "discount": 0,
+        "shipping": 70,
+        "giftWrap": 0,
+        "codFee": 0,
+        "total": 1520
+      },
+      "paymentStatus": "refunded"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "c1",
+      "code": "MIST10",
+      "pct": 10,
+      "used": 142,
+      "on": true,
+      "usageLimit": null,
+      "minOrder": null,
+      "startsAt": null,
+      "endsAt": null
+    },
+    {
+      "id": "c2",
+      "code": "OUDVIP",
+      "pct": 15,
+      "used": 38,
+      "on": true,
+      "usageLimit": null,
+      "minOrder": null,
+      "startsAt": null,
+      "endsAt": null
+    },
+    {
+      "id": "c3",
+      "code": "RAMADAN25",
+      "pct": 25,
+      "used": 610,
+      "on": false,
+      "usageLimit": null,
+      "minOrder": null,
+      "startsAt": null,
+      "endsAt": null
+    }
+  ],
+  "zones": [
+    {
+      "id": "cairo",
+      "gov": {
+        "en": "Cairo",
+        "ar": "القاهرة"
+      },
+      "fee": 70,
+      "eta": {
+        "en": "48 hours",
+        "ar": "٤٨ ساعة"
+      },
+      "cod": true
+    },
+    {
+      "id": "giza",
+      "gov": {
+        "en": "Giza",
+        "ar": "الجيزة"
+      },
+      "fee": 70,
+      "eta": {
+        "en": "48 hours",
+        "ar": "٤٨ ساعة"
+      },
+      "cod": true
+    },
+    {
+      "id": "alex",
+      "gov": {
+        "en": "Alexandria",
+        "ar": "الإسكندرية"
+      },
+      "fee": 90,
+      "eta": {
+        "en": "2–3 days",
+        "ar": "٢–٣ أيام"
+      },
+      "cod": true
+    },
+    {
+      "id": "dakahlia",
+      "gov": {
+        "en": "Dakahlia",
+        "ar": "الدقهلية"
+      },
+      "fee": 95,
+      "eta": {
+        "en": "2–4 days",
+        "ar": "٢–٤ أيام"
+      },
+      "cod": true
+    },
+    {
+      "id": "sharqia",
+      "gov": {
+        "en": "Sharqia",
+        "ar": "الشرقية"
+      },
+      "fee": 95,
+      "eta": {
+        "en": "2–4 days",
+        "ar": "٢–٤ أيام"
+      },
+      "cod": true
+    },
+    {
+      "id": "luxor",
+      "gov": {
+        "en": "Luxor",
+        "ar": "الأقصر"
+      },
+      "fee": 120,
+      "eta": {
+        "en": "3–4 days",
+        "ar": "٣–٤ أيام"
+      },
+      "cod": false
+    },
+    {
+      "id": "aswan",
+      "gov": {
+        "en": "Aswan",
+        "ar": "أسوان"
+      },
+      "fee": 130,
+      "eta": {
+        "en": "3–4 days",
+        "ar": "٣–٤ أيام"
+      },
+      "cod": false
+    },
+    {
+      "id": "redsea",
+      "gov": {
+        "en": "Red Sea",
+        "ar": "البحر الأحمر"
+      },
+      "fee": 150,
+      "eta": {
+        "en": "4 days",
+        "ar": "٤ أيام"
+      },
+      "cod": false
+    }
+  ],
+  "subscribers": []
+}

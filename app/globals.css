@@ -1,26 +1,497 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+   Maison Oud design tokens
+   Source of truth: design_handoff_maison_oud/DESIGN.md (tokens.json).
+   Pearl is the default (light) theme, Abyss the dark one. Every value below is
+   the brand token; the shadcn aliases underneath map onto these, so shadcn
+   primitives inherit the brand without being re-skinned one by one.
+--------------------------------------------------------------------------- */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Pearl */
+  --surface: #f4f7f7;
+  --surface-raised: #ffffff;
+  --surface-sunken: #e6eeef;
+  --line: #d5e0e2;
+  --line-strong: #7a9095;
+  --ink: #10262b;
+  --ink-muted: #4c6166;
+  --primary-c: #1d4e57;
+  --on-primary: #f4f7f7;
+  --deep: #1d4e57;
+  --on-deep: #f4f7f7;
+  --aqua: #7fa7ad;
+  --aqua-ink: #2f6b75;
+  --aqua-soft: #dcebed;
+  --pearl: #e6e2d8;
+  --rose: #9c5a55;
+  --focus: #2f6b75;
+  --success: #2f6b4a;
+  --success-soft: #e1efe6;
+  --warning: #8a5d0e;
+  --warning-soft: #f6ead2;
+  --danger: #a3362b;
+  --danger-soft: #f6e1de;
+  --info: #2d5b7a;
+  --info-soft: #dfeaf2;
+
+  --shadow-soft:
+    0 1px 2px rgba(16, 38, 43, 0.06), 0 8px 24px rgba(16, 38, 43, 0.07);
+  --shadow-overlay: 0 24px 64px rgba(16, 38, 43, 0.18);
+  --scrim: rgba(7, 16, 18, 0.5);
+
+  /* spacing scale */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s6: 24px;
+  --s8: 32px;
+  --s12: 48px;
+  --s16: 64px;
+  --s24: 96px;
+
+  /* radii */
+  --r-none: 0px;
+  --r-sm: 2px;
+  --r-md: 8px;
+  --r-lg: 14px;
+  --r-full: 999px;
+
+  /* motion */
+  --ease-scent: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast: 180ms;
+  --dur-base: 420ms;
+  --dur-slow: 900ms;
+
+  /* shadcn aliases -> brand tokens */
+  --background: var(--surface);
+  --foreground: var(--ink);
+  --card: var(--surface-raised);
+  --card-foreground: var(--ink);
+  --popover: var(--surface-raised);
+  --popover-foreground: var(--ink);
+  --primary: var(--primary-c);
+  --primary-foreground: var(--on-primary);
+  --secondary: var(--surface-sunken);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-sunken);
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--aqua-soft);
+  --accent-foreground: var(--aqua-ink);
+  --destructive: var(--danger);
+  --destructive-foreground: var(--surface-raised);
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--focus);
+  --radius: 8px;
+
+  --chart-1: #1d4e57;
+  --chart-2: #7fa7ad;
+  --chart-3: #9c5a55;
+  --chart-4: #8a5d0e;
+  --chart-5: #2d5b7a;
+
+  --sidebar: var(--surface-raised);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--primary-c);
+  --sidebar-primary-foreground: var(--on-primary);
+  --sidebar-accent: var(--aqua-soft);
+  --sidebar-accent-foreground: var(--aqua-ink);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--focus);
+}
+
+.dark,
+[data-theme="dark"] {
+  /* Abyss */
+  --surface: #0b1719;
+  --surface-raised: #122326;
+  --surface-sunken: #071012;
+  --line: #1f3438;
+  --line-strong: #5f7b80;
+  --ink: #e8f1f2;
+  --ink-muted: #9fb5b9;
+  --primary-c: #9cc7cd;
+  --on-primary: #0b1719;
+  --deep: #153b42;
+  --on-deep: #e8f1f2;
+  --aqua: #7fa7ad;
+  --aqua-ink: #9cc7cd;
+  --aqua-soft: #15343a;
+  --pearl: #d8d2c4;
+  --rose: #d9a3a0;
+  --focus: #9cc7cd;
+  --success: #6fbf8f;
+  --success-soft: #14281c;
+  --warning: #e0b050;
+  --warning-soft: #2e230d;
+  --danger: #e57b6e;
+  --danger-soft: #301512;
+  --info: #7fb2d6;
+  --info-soft: #10222e;
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --scrim: rgba(0, 0, 0, 0.62);
+
+  --destructive-foreground: var(--surface);
+  --chart-1: #9cc7cd;
+  --chart-2: #7fa7ad;
+  --chart-3: #d9a3a0;
+  --chart-4: #e0b050;
+  --chart-5: #7fb2d6;
 }
 
 @theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-on-primary: var(--on-primary);
+  --color-deep: var(--deep);
+  --color-on-deep: var(--on-deep);
+  --color-aqua: var(--aqua);
+  --color-aqua-ink: var(--aqua-ink);
+  --color-aqua-soft: var(--aqua-soft);
+  --color-pearl: var(--pearl);
+  --color-rose: var(--rose);
+  --color-focus: var(--focus);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-display: var(--font-display-family);
+  --font-sans: var(--font-sans-family);
+  --font-heading: var(--font-display-family);
+
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: 20px;
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-overlay: var(--shadow-overlay);
+
+  --ease-scent: var(--ease-scent);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------------------------------------------------------------------------
+   Font pairing. The families swap with locale: Latin gets Cormorant Garamond +
+   Manrope, Arabic gets Amiri + IBM Plex Sans Arabic. `--font-*-var` are the
+   next/font CSS variables set on <html>.
+--------------------------------------------------------------------------- */
+
+:root {
+  --font-display-family: var(--font-cormorant), Georgia, serif;
+  --font-sans-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+:root:lang(ar),
+[lang="ar"] {
+  --font-display-family: var(--font-amiri), var(--font-cormorant), serif;
+  --font-sans-family: var(--font-plex-arabic), var(--font-manrope), system-ui,
+    sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-sans-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Never the browser default. */
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--aqua-soft);
+    color: var(--ink);
+  }
+
+  [disabled],
+  [aria-disabled="true"],
+  .is-disabled {
+    cursor: not-allowed;
+  }
+
+  /* Arabic drops the Latin tracking on eyebrow labels. */
+  [lang="ar"] .eyebrow,
+  [dir="rtl"] .eyebrow {
+    letter-spacing: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Typography roles from the token set. */
+  .display-xl {
+    font-family: var(--font-display-family);
+    font-size: clamp(48px, 5.4vw, 88px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .display-lg {
+    font-family: var(--font-display-family);
+    font-size: clamp(36px, 3.6vw, 56px);
+    line-height: 1.02;
+    font-weight: 400;
+  }
+
+  .heading {
+    font-family: var(--font-display-family);
+    font-size: clamp(28px, 2.4vw, 36px);
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  .heading-sm {
+    font-family: var(--font-display-family);
+    font-size: clamp(22px, 1.7vw, 28px);
+    line-height: 1.25;
+    font-weight: 500;
+  }
+
+  /* Named `eyebrow`, not `overline`: Tailwind ships an `overline` utility for
+     text-decoration-line and it wins, drawing a rule above the label. */
+  .eyebrow {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .micro {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Wordmark — display family, wide tracking, uppercase. */
+  .wordmark {
+    font-family: var(--font-display-family);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  /* 4:5 editorial image stage on sunken ground. `min-width:0` and
+     `align-self:start` keep the aspect box from blowing out its grid track. */
+  .stage {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    min-width: 0;
+    align-self: start;
+    overflow: hidden;
+    background: var(--surface-sunken);
+  }
+
+  .page-x {
+    padding-inline: var(--s4);
+  }
+
+  @media (min-width: 768px) {
+    .page-x {
+      padding-inline: var(--s8);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-x {
+      padding-inline: var(--s12);
+    }
+  }
+
+  .shell {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+  }
+
+  .shell-wide {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .rhythm {
+    padding-block: var(--s16);
+  }
+
+  @media (min-width: 1024px) {
+    .rhythm {
+      padding-block: var(--s24);
+    }
+  }
+
+  .hairline {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@layer utilities {
+  /* Bidi isolation for Latin/numeric runs inside Arabic copy. */
+  .isolate-bidi {
+    unicode-bidi: isolate;
+  }
+
+  .ltr-field {
+    direction: ltr;
+    text-align: start;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Print. Used by the order detail's "Print invoice": the dashboard chrome and
+   the page's own actions drop out, and only the invoice block is laid out, on
+   white, at a readable size.
+--------------------------------------------------------------------------- */
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  :root,
+  :root[data-theme="dark"],
+  .dark {
+    /* Never print the Abyss palette. */
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --surface-sunken: #f4f4f4;
+    --ink: #000000;
+    --ink-muted: #444444;
+    --line: #cccccc;
+    --line-strong: #999999;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Everything outside the invoice is chrome. */
+  .print-hide,
+  header,
+  aside,
+  nav,
+  [role="dialog"],
+  [data-sonner-toaster] {
+    display: none !important;
+  }
+
+  .print-sheet {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Reveal motion is skipped entirely when the user asks for less of it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
