@@ -48,11 +48,19 @@ export const imageScale: Variants = {
   show: { scale: 1, transition: scentSlow },
 };
 
-/** Shared `whileInView` config — fire once, a little before the edge. */
+/* Shared `whileInView` config — fire once, when a fifth of the element is on
+   screen.
+
+   `amount` rather than a negative `margin`: a negative rootMargin shrinks the
+   observer root, and in practice it reported "not intersecting" even for an
+   element sitting in the middle of the viewport, which left every image reveal
+   permanently clipped at inset(100%). `amount` expresses the same intent —
+   "wait until it is meaningfully visible" — and is defined against the element
+   rather than the root. */
 export const inView = {
   initial: "hidden",
   whileInView: "show",
-  viewport: { once: true, margin: "-10%" },
+  viewport: { once: true, amount: 0.2 },
 } as const;
 
 /** Drawer/panel: backdrop fades, panel rises and settles. */

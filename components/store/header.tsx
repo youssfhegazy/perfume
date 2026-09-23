@@ -64,14 +64,14 @@ export function Header() {
             onClick={() => setNavOpen(true)}
             aria-label={dict.nav.menu}
             aria-expanded={navOpen}
-            className="-ms-2 grid min-h-11 w-11 place-items-center lg:hidden"
+            className="-ms-2 grid min-h-11 w-11 shrink-0 place-items-center lg:hidden"
           >
             <Menu className="size-5" strokeWidth={1.5} />
           </button>
 
           <Link
             href={href("/")}
-            className="wordmark shrink-0 text-[15px] lg:text-[18px]"
+            className="wordmark min-w-0 truncate text-[15px] lg:shrink-0 lg:text-[18px]"
           >
             {dict.brand}
           </Link>
@@ -118,13 +118,13 @@ export function Header() {
               <Search className="size-[18px]" strokeWidth={1.5} />
             </button>
 
-            <LocaleToggle />
-            <ThemeToggle />
+            <LocaleToggle className="hidden lg:block" />
+            <ThemeToggle className="hidden lg:grid" />
 
             <Link
               href={href("/wishlist")}
               aria-label={`${dict.nav.wishlist} (${wishlist.length})`}
-              className="relative grid min-h-11 w-11 place-items-center transition-colors hover:text-[var(--aqua-ink)]"
+              className="relative hidden min-h-11 w-11 place-items-center transition-colors hover:text-[var(--aqua-ink)] lg:grid"
             >
               <Heart
                 className={cn(

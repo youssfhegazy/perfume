@@ -240,6 +240,25 @@ const en = {
     track: "Track this order",
   },
 
+  errors: {
+    notFoundCode: "404",
+    notFoundTitle: "This page has evaporated.",
+    notFoundBody:
+      "The link may be old, or the fragrance may have been retired. The collection is still here.",
+    notFoundCta: "Shop the collection",
+    serverCode: "500",
+    serverTitle: "Something went wrong.",
+    serverBody:
+      "The page could not be loaded. Try again — if it keeps happening, let us know.",
+    retry: "Try again",
+    home: "Back to the home page",
+    adminTitle: "This module could not load.",
+    adminBody:
+      "The error has been logged. Try again, or go back to the dashboard.",
+    adminBack: "Back to the dashboard",
+    reference: "Reference",
+  },
+
   track: {
     title: "Track your order",
     intro:
@@ -739,6 +758,24 @@ const ar: Dict = {
     next4Note: "وقّع عند الاستلام أو اترك ملاحظة للبوّاب.",
     continue: "تابع التسوق",
     track: "تتبّع الطلب",
+  },
+
+  errors: {
+    notFoundCode: "٤٠٤",
+    notFoundTitle: "هذه الصفحة تبخّرت.",
+    notFoundBody:
+      "قد يكون الرابط قديماً أو العطر قد سُحب. المجموعة ما زالت هنا.",
+    notFoundCta: "تسوّق المجموعة",
+    serverCode: "٥٠٠",
+    serverTitle: "حدث خطأ ما.",
+    serverBody:
+      "تعذّر تحميل الصفحة. حاول مرة أخرى — وإن تكرّر الأمر فأخبرنا.",
+    retry: "حاول مرة أخرى",
+    home: "العودة إلى الصفحة الرئيسية",
+    adminTitle: "تعذّر تحميل هذه الوحدة.",
+    adminBody: "تم تسجيل الخطأ. حاول مجدداً أو ارجع إلى لوحة التحكم.",
+    adminBack: "العودة إلى لوحة التحكم",
+    reference: "المرجع",
   },
 
   track: {

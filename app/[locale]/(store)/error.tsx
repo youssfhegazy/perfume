@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import { ServerErrorState } from "@/components/brand/error-state";
 
-export default function ErrorBoundary({
+export default function StoreError({
   error,
   reset,
 }: {
@@ -12,7 +12,6 @@ export default function ErrorBoundary({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Wire this to your error reporter (Sentry, Axiom, …).
     console.error(error);
   }, [error]);
 
