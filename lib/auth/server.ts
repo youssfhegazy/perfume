@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { readClient, writeClient } from "@/sanity/lib/client";
 import { sanityConfigured } from "@/sanity/lib/env";
 
+import { isDemoEmail, isDemoMode } from "./demo";
 import { verifyPassword } from "./password";
 import { can, type Permission, type Role } from "./roles";
 import {
@@ -143,4 +144,18 @@ export async function upsertUser(input: {
     active: true,
   });
   return id;
+}
+
+/**
+ * Looks up a demo account by address, bypassing the password because the
+ * caller has already established that demo mode is on. Refuses any address
+ * that is not one of the three demo accounts.
+ */
+export async function findDemoUser(email: string) {
+  if (!isDemoMode()) return null;
+  if (!isDemoEmail(email)) return null;
+
+  const user = await findUser(email);
+  if (!user) return null;
+  return { id: user.id, name: user.name, email: user.email, role: user.role };
 }

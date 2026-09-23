@@ -3,8 +3,9 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { demoEntryAccount, isDemoMode } from "./demo";
 import { landingFor } from "./roles";
-import { authSecret, getSession, verifyCredentials } from "./server";
+import { authSecret, findDemoUser, getSession, verifyCredentials } from "./server";
 import { SESSION_COOKIE, SESSION_MAX_AGE, signSession } from "./session";
 
 export interface SignInState {
@@ -58,4 +59,32 @@ export async function signOut(locale: string) {
 /** Exposed to Server Components that need the current user. */
 export async function currentUser() {
   return getSession();
+}
+
+/**
+ * One-click dashboard entry for the demo footer — no credentials typed.
+ *
+ * Re-checks the demo flag on the server, and can only ever sign into an
+ * account named in the DEMO_* environment variables, so turning demo mode on
+ * cannot expose a real one.
+ */
+export async function enterDemo(locale = "en") {
+  if (!isDemoMode()) throw new Error("demo-mode-disabled");
+
+  const account = demoEntryAccount();
+  if (!account) throw new Error("demo-account-not-configured");
+
+  const user = await findDemoUser(account.email);
+  if (!user) throw new Error("demo-account-missing");
+
+  const jar = await cookies();
+  jar.set(SESSION_COOKIE, await signSession(user, authSecret()), {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    maxAge: SESSION_MAX_AGE,
+  });
+
+  redirect(`/${locale}${landingFor(user.role)}`);
 }

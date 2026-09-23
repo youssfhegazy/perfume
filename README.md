@@ -87,6 +87,19 @@ Roles are Owner, Admin, Editor (content only) and Fulfilment (orders only).
 The nav is filtered per role, direct URLs are denied, and every mutating
 action re-checks the permission server-side. See FEATURES.md → Authentication.
 
+### Showing it to a client
+
+Set `NEXT_PUBLIC_DEMO_MODE=1` and fill in the `DEMO_*` accounts in
+`.env.local`. The storefront footer then offers two buttons:
+
+- **Open the demo** — straight into the dashboard as an owner, nothing typed.
+- **Sign in** — the real login page, which lists the three demo accounts as
+  quick-fill so you can show what each role sees.
+
+Only the addresses named in `DEMO_*` can be signed into without a password,
+and only while the flag is on. The server action checks the flag itself, so a
+stale build cannot leave the door open. **Leave it empty in production.**
+
 Destructive actions go through a confirm dialog (`components/admin/confirm-dialog.tsx`)
 rather than deleting outright, per the data contracts.
 

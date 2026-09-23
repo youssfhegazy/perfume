@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 
 import { LoginForm } from "@/components/admin/login-form";
+import { demoAccounts } from "@/lib/auth/demo";
 import { getSession } from "@/lib/auth/server";
 import { landingFor } from "@/lib/auth/roles";
 import { isLocale } from "@/lib/i18n/dictionary";
@@ -21,7 +22,7 @@ export default async function LoginPage({
 
   return (
     <div className="flex min-h-dvh items-center justify-center bg-[var(--surface)] p-4">
-      <LoginForm next={next} />
+      <LoginForm next={next} demoAccounts={demoAccounts()} />
     </div>
   );
 }

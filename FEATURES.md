@@ -172,6 +172,7 @@ resolve to `/collection` — those pages do not exist yet.
 | Server-side validation | ✅ | Actions validate independently of the client |
 | **Authentication** | ✅ | scrypt passwords, signed 8-hour session cookie (httpOnly, sameSite), `proxy.ts` gate on `/admin` and `/studio`, per-module permission check on every page, and `assertPermission` on all 15 mutating actions |
 | Roles | ✅ | Owner · Admin · Editor (content only) · Fulfilment (orders only). Nav is filtered per role and direct URLs are denied |
+| Demo mode | ✅ | Two footer buttons — one opens the dashboard with nothing to type, one goes to the sign-in page, which offers the three demo accounts as quick-fill. Off unless `NEXT_PUBLIC_DEMO_MODE` is set; the server action re-checks the flag and only accepts the `DEMO_*` addresses |
 | Order tracking | ✅ | `/[locale]/track` — order number plus phone, matched on the last 9 digits so formatting does not matter |
 | Transactional email / SMS | 🟡 | `lib/notifications.ts` is called on every order and logs; no provider is wired (see below) |
 | Analytics | ⛔ | |

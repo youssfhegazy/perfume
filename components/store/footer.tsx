@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import { Overline } from "@/components/brand/primitives";
 import { useLocale } from "@/components/providers/locale-provider";
+import { DemoBar } from "@/components/store/demo-bar";
+import { isDemoMode } from "@/lib/auth/demo";
 
 export function Footer() {
   const { dict, href } = useLocale();
@@ -68,11 +70,26 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Only when NEXT_PUBLIC_DEMO_MODE is on. The action re-checks it. */}
+        {isDemoMode() ? (
+          <div className="mt-12">
+            <DemoBar />
+          </div>
+        ) : null}
+
         <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.14] pt-6 text-[12px] text-[var(--on-deep)]/70 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {dict.brand}. {dict.footer.rights}
           </p>
-          <p>{dict.footer.payments}</p>
+          <span className="flex flex-wrap items-center gap-4">
+            <Link
+              href={href("/admin/login")}
+              className="underline decoration-[var(--aqua)] underline-offset-4 transition-colors hover:text-[var(--on-deep)]"
+            >
+              {dict.footer.dashboard}
+            </Link>
+            <span>{dict.footer.payments}</span>
+          </span>
         </div>
       </div>
     </footer>
